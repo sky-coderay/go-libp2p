@@ -34,11 +34,11 @@ Now, launch another node that talks to the listener:
 > ./echo -l 10001 -d /ip4/127.0.0.1/tcp/10000/p2p/QmYo41GybvrXk8y8Xnm1P7pfA4YEXCpfnLyzgRPnNbG35e
 ```
 
-The new node with send the message `"Hello, world!"` to the listener, which will in turn echo it over the stream and close it. The listener logs the message, and the sender logs the response.
+The new node will send the message `"Hello, world!"` to the listener, which will in turn echo it over the stream and close it. The listener logs the message, and the sender logs the response.
 
 ## Details
 
-The `makeBasicHost()` function creates a [go-libp2p-basichost](https://godoc.org/github.com/libp2p/go-libp2p/p2p/host/basic) object. `basichost` objects wrap [go-libp2p swarms](https://godoc.org/github.com/libp2p/go-libp2p-swarm#Swarm) and should be used preferentially. A [go-libp2p-swarm Network](https://godoc.org/github.com/libp2p/go-libp2p-swarm#Network) is a `swarm` which complies to the [go-libp2p-net Network interface](https://godoc.org/github.com/libp2p/go-libp2p-net#Network) and takes care of maintaining streams, connections, multiplexing different protocols on them, handling incoming connections etc.
+The `makeBasicHost()` function creates a [go-libp2p-basichost](https://godoc.org/github.com/libp2p/go-libp2p/p2p/host/basic) object. `basichost` objects wrap [go-libp2p swarms](https://godoc.org/github.com/libp2p/go-libp2p-swarm#Swarm) and should be used preferred. A [go-libp2p-swarm Network](https://godoc.org/github.com/libp2p/go-libp2p-swarm#Network) is a `swarm` which complies to the [go-libp2p-net Network interface](https://godoc.org/github.com/libp2p/go-libp2p-net#Network) and takes care of maintaining streams, connections, multiplexing different protocols on them, handling incoming connections etc.
 
 In order to create the swarm (and a `basichost`), the example needs:
 

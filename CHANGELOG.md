@@ -49,7 +49,7 @@ Since the last release, we've added metrics for:
 
 ### WebTransport <!-- omit in toc -->
 * [#2251](https://github.com/libp2p/go-libp2p/pull/2251): Infer public WebTransport address from `quic-v1` addresses if both transports are using the same port for both quic-v1 and WebTransport addresses.
-* [#2271](https://github.com/libp2p/go-libp2p/pull/2271): Only add certificate hashes to WebTransport mulitaddress if listening on WebTransport
+* [#2271](https://github.com/libp2p/go-libp2p/pull/2271): Only add certificate hashes to WebTransport multiaddress if listening on WebTransport
 
 ## Housekeeping updates <!-- omit in toc -->
 * Identify
